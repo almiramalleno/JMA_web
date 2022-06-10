@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+      h1 {
+        color: #fff;
+        background: rgba(0, 0, 0, 0.6);
+      }
+      h2 {
+        color: #fff;
+      }
+      body {
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background: url(images/1112.jpg) no-repeat;
+        background-size: cover;
+      }
+      .Login {
+        padding: 10px;
+        font-family: "Century Gothic", sans-serif;
+        font-size: 20px;
+      }
+      .box {
+        width: 450px;
+        background: rgba(0, 0, 0, 0.4);
+        padding: 10px;
+        text-align: center;
+        margin: auto;
+        margin-top: 5%;
+        color: white;
+        font-family: "Century Gothic", sans-serif;
+      }
+      .box-img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+      }
+      window.location {
+        text-align: center;
+      }
+      .iphone7 img {
+        width: 50px;
+        animation: bubble 7s linear infinite;
+      }
+      .iphone7 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: absolute;
+        bottom: 0;
+      }
+      @keyframes bubble {
+        0% {
+          transform: translateY(0);
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        70% {
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(-80vh);
+          opacity: 0;
+        }
+      }
+      .iphone7 img:nth-child(1) {
+        animation-delay: 2s;
+        width: 25px;
+      }
+      .iphone7 img:nth-child(2) {
+        animation-delay: 1s;
+      }
+      .iphone7 img:nth-child(3) {
+        animation-delay: 3s;
+        width: 25px;
+      }
+      .iphone7 img:nth-child(4) {
+        animation-delay: 4.5s;
+      }
+      .iphone7 img:nth-child(5) {
+        animation-delay: 6s;
+      }
+      .iphone7 img:nth-child(6) {
+        animation-delay: 5s;
+        width: 20px;
+      }
+      .iphone7 img:nth-child(7) {
+        animation-delay: 3s;
+        width: 35px;
+      }
+    </style>
+    <script>
+      var again = 3;
+      function login() {
+        var Username = document.getElementById("Username").value;
+        var Password = document.getElementById("Password").value;
+
+        if (Username == "Admin123" && Password == "admin") {
+          window.location = "Home.html";
+        } else if (again == 1) {
+          window.location = "wrong3x.html";
+        } else {
+          again--;
+          alert("INCORRECT CREDENTIALS");
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="Login">
+      <h1>LOGIN</h1>
+    </div>
+
+    <div class="box">
+      <img src="images/logo1.jpg" alt="" class="box-img" />
+
+      <center>
+        <h2>Username: <input type="text" id="Username" /></h2>
+        <h2>Password : <input type="password" id="Password" /><br /></h2>
+        <input type="button" value="Login" onclick="login()" />
+      </center>
+    </div>
+    <div class="iphone7">
+      <img src="images/iphone7.png" />
+      <img src="images/iphonexr1.png" />
+      <img src="images/iphonex.png" />
+      <img src="images/iphone11promax.png" />
+      <img src="images/iphone5.png" />
+      <img src="images/iphone6+.png" />
+      <img src="images/iphone8+.png" />
+    </div>
+  </body>
+</html>
